@@ -1,0 +1,13 @@
+package com.example.resume_backend.repositories.skills;
+
+import com.example.resume_backend.entities.skills.BackendSkills;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.ArrayList;
+import java.util.Optional;
+
+@Repository
+public interface BackendSkillsRepository extends JpaRepository<BackendSkills, Long> {
+    Optional<ArrayList<BackendSkills>> findAllByOrderByIdDesc();
+}
