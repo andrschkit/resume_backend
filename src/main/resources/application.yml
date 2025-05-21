@@ -1,1 +1,19 @@
-spring.application.name=resume_backend
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/Resume"
+    username: "postgres"
+    password: "qwerty"
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: false
+    generate-ddl: false
+    hibernate:
+      ddl-auto: validate
+    database: postgresql
+server:
+  port: 8080
+api:
+  resume:
+    api-base-url: "http://localhost:8082/api"
+    api-key-name: "Resume-API-Key"
+    api-key: "Resume-07041997-RA"

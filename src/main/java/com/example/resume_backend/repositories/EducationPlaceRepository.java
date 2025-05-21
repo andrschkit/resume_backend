@@ -9,5 +9,5 @@ import java.util.Optional;
 
 @Repository
 public interface EducationPlaceRepository extends JpaRepository<EducationPlace, Long> {
-    Optional<ArrayList<EducationPlace>> findAllByOrderByIdDesc();
+    ArrayList<EducationPlace> findAllByOrderByIdAsc();
 }

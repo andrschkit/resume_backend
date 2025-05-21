@@ -3,20 +3,20 @@ package com.example.resume_backend.entities.skills;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "main_skills", schema = "skills")
-public class MainSkills {
+@Table(name = "frontend_skills", schema = "skills")
+public class FrontendSkill {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "main_skills_id")
+    @Column(name = "frontend_skills_id")
     private Long id;
 
-    @Column(name = "main_skills_name")
+    @Column(name = "frontend_skills_name")
     private String name;
 
-    @Column(name = "main_skills_description")
+    @Column(name = "frontend_skills_description")
     private String description;
 
-    @Column(name = "main_skills_logo")
+    @Column(name = "frontend_skills_logo")
     private String logo;
 
     public Long getId() {
