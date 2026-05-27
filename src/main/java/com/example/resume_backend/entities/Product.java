@@ -1,6 +1,11 @@
 package com.example.resume_backend.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "product", schema = "portfolio")
@@ -24,6 +29,17 @@ public class Product {
 
     @Column(name = "product_link")
     private String link;
+
+    @Column(name = "product_nda")
+    private Boolean nda;
+
+    @Column(name = "product_screenshot_1_url")
+    @JsonIgnore
+    private String screenshot1Url;
+
+    @Column(name = "product_screenshot_2_url")
+    @JsonIgnore
+    private String screenshot2Url;
 
     public Long getId() {
         return id;
@@ -71,5 +87,38 @@ public class Product {
 
     public void setLink(String link) {
         this.link = link;
+    }
+
+    public Boolean getNda() {
+        return nda;
+    }
+
+    public void setNda(Boolean nda) {
+        this.nda = nda;
+    }
+
+    @JsonProperty("screenshots")
+    @Transient
+    public List<String> getScreenshots() {
+        ArrayList<String> list = new ArrayList<>();
+        if (screenshot1Url != null && !screenshot1Url.isBlank()) list.add(screenshot1Url);
+        if (screenshot2Url != null && !screenshot2Url.isBlank()) list.add(screenshot2Url);
+        return list;
+    }
+
+    public String getScreenshot1Url() {
+        return screenshot1Url;
+    }
+
+    public void setScreenshot1Url(String screenshot1Url) {
+        this.screenshot1Url = screenshot1Url;
+    }
+
+    public String getScreenshot2Url() {
+        return screenshot2Url;
+    }
+
+    public void setScreenshot2Url(String screenshot2Url) {
+        this.screenshot2Url = screenshot2Url;
     }
 }

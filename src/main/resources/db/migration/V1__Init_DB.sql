@@ -104,3 +104,17 @@ create schema portfolio
     );
 alter table portfolio.product
     owner to postgres;
+
+-- extensions (merged from later migrations; DDL only)
+
+ALTER TABLE contacts."user"
+    ADD COLUMN IF NOT EXISTS user_telegram varchar(255),
+    ADD COLUMN IF NOT EXISTS user_vk varchar(255);
+
+ALTER TABLE education.education_place
+    ADD COLUMN IF NOT EXISTS education_place_certificate_url varchar(512);
+
+ALTER TABLE portfolio.product
+    ADD COLUMN IF NOT EXISTS product_nda boolean not null default false,
+    ADD COLUMN IF NOT EXISTS product_screenshot_1_url varchar(512),
+    ADD COLUMN IF NOT EXISTS product_screenshot_2_url varchar(512);

@@ -22,6 +22,9 @@ public class EducationPlace {
     @Column(name = "education_place_time_interval")
     private String interval;
 
+    @Column(name = "education_place_certificate_url")
+    private String certificateUrl;
+
     public Long getId() {
         return id;
     }
@@ -60,5 +63,13 @@ public class EducationPlace {
 
     public void setInterval(String interval) {
         this.interval = interval;
+    }
+
+    public String getCertificateUrl() {
+        return certificateUrl;
+    }
+
+    public void setCertificateUrl(String certificateUrl) {
+        this.certificateUrl = certificateUrl;
     }
 }
