@@ -262,7 +262,7 @@ VALUES ('Андрей',
         '+7 (916) 027-48-62',
         'andrschkit@gmail.com',
         'https://github.com/andrschkit',
-        'https://localhost:8080/userphoto.jpg',
+        null,
         'https://t.me/andrschkit',
         'https://vk.com/andrryuk');
 
