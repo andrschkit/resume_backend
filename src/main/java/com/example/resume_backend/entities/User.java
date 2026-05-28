@@ -31,6 +31,12 @@ public class User {
     @Column(name = "user_photo_url")
     private String photo_url;
 
+    @Column(name = "user_telegram")
+    private String telegram;
+
+    @Column(name = "user_vk")
+    private String vk;
+
     public Long getId() {
         return id;
     }
@@ -93,5 +99,21 @@ public class User {
 
     public void setPhoto_url(String photo_url) {
         this.photo_url = photo_url;
+    }
+
+    public String getTelegram() {
+        return telegram;
+    }
+
+    public void setTelegram(String telegram) {
+        this.telegram = telegram;
+    }
+
+    public String getVk() {
+        return vk;
+    }
+
+    public void setVk(String vk) {
+        this.vk = vk;
     }
 }

@@ -1,6 +1,7 @@
 package com.example.resume_backend.entities;
 
 import jakarta.persistence.*;
+
 @Entity
 @Table(name = "work_place", schema = "career")
 public class WorkPlace {

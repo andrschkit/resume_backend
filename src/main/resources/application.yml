@@ -1,1 +1,5 @@
-spring.application.name=resume_backend
+spring:
+  profiles:
+    active: "local"
+  config:
+    import: optional:file:.env[.properties]
