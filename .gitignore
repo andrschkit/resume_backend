@@ -34,3 +34,4 @@ build/
 
 ### CONF ###
 application-local.yml
+.env
