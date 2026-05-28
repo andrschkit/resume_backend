@@ -21,9 +21,6 @@ public class Product {
     @Column(name = "product_description")
     private String description;
 
-    @Column(name = "product_logo_img_url")
-    private String logo;
-
     @Column(name = "product_img_url")
     private String img;
 
@@ -63,14 +60,6 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getLogo() {
-        return logo;
-    }
-
-    public void setLogo(String logo) {
-        this.logo = logo;
     }
 
     public String getImg() {
