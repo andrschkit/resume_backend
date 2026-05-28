@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: "${SPRING_DATASOURCE_URL}"
+    username: "${SPRING_DATASOURCE_USERNAME}"
+    password: "${SPRING_DATASOURCE_PASSWORD}"
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+  jpa:
+    show-sql: false
+    generate-ddl: false
+    hibernate:
+      ddl-auto: validate
+    database: postgresql
+server:
+  port: "${SERVER_PORT:8095}"
+api:
+  resume:
+    api-base-url: "${API_RESUME_BASE_URL}"
+    api-key-name: "${API_RESUME_KEY_NAME}"
+    api-key: "${API_RESUME_KEY}"
