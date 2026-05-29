@@ -1,3 +1,8 @@
+springdoc:
+  api-docs:
+    path: /api/v3/api-docs
+  swagger-ui:
+    path: /api/swagger-ui.html
 spring:
   datasource:
     url: "${SPRING_DATASOURCE_URL}"
